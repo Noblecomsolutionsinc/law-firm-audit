@@ -1,9 +1,6 @@
 services:
   - type: web
-    name: law-firm-report
+    name: law-firm-audit
     env: python
     buildCommand: ""
     startCommand: "python app.py"
-    envVars:
-      - key: FLASK_ENV
-        value: production

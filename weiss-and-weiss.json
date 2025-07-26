@@ -1,0 +1,47 @@
+{
+  "client_name": "Weiss & Weiss",
+  "website": "weissweisslaw.com",
+  "location": "Chicago, IL",
+  "specialty_areas": [
+    "Personal Injury",
+    "Workers' Compensation",
+    "Construction Site Accidents",
+    "Wrongful Death"
+  ],
+  "summary": {
+    "experience": "Over 60 years combined experience in injury law in Chicago",
+    "attention": "Personal attention from founding attorneys for every case",
+    "consultation": "Free consultation, no fee until claim recovered"
+  },
+  "contact": {
+    "address": "415 N. LaSalle Street, Suite\u00a0203, Chicago, IL 60654",
+    "phone": "312\u2011321\u20119200"
+  },
+  "key_findings": [
+    "Clean and professional homepage but limited trust signals (e.g. awards/client wins).",
+    "Site lacks mobile-responsive spacing and load speed optimization.",
+    "Limited posting or updates across social media channels."
+  ],
+  "competitor_comparison": [
+    {
+      "name": "Justice Now Law",
+      "strengths": [
+        "Faster site",
+        "Modern UX",
+        "Strong reviews"
+      ]
+    },
+    {
+      "name": "Smith Legal Group",
+      "strengths": [
+        "Top\u20113 rankings",
+        "Video testimonials"
+      ]
+    }
+  ],
+  "recommendations": [
+    "Improve page speed (optimize images/scripts).",
+    "Add more trust signals like awards, client settlements posted publicly.",
+    "Encourage new Google reviews and post updates weekly."
+  ]
+}

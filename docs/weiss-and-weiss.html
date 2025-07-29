@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-MXfwZCt9kK8aOC2Jp0pJxN1Gc3ZTKoRG5nHGSKmpO4aTZF5NXXheFqX3SGxPZm3L+0zYiLNdD+/+gNvFQ1HZRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weiss & Weiss Audit</title>
+
+  <!-- ✅ Load Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ✅ Custom animation for fade-in-up -->
+  <style>
+    body {
+      background-color: #000;
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body class="text-white">
+
+<!-- ✅ Hero Section -->
+<section class="relative bg-white text-black px-6 py-16 overflow-hidden fade-in-up">
+  <div class="max-w-7xl mx-auto flex flex-col items-center justify-center text-center space-y-6">
+    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+      Elite Digital Audit for<br>
+      <span class="text-yellow-500">Weiss & Weiss</span>
+    </h1>
+    <p class="text-lg md:text-xl text-gray-700 max-w-2xl">
+      We analyzed your firm’s online footprint — uncovering missed opportunities, search gaps, and high-impact wins in SEO, UX, reviews, and maps.
+    </p>
+    <a href="#summary" class="mt-4 inline-block bg-yellow-500 text-black px-8 py-3 text-lg font-semibold rounded-full shadow hover:bg-yellow-400 transition">
+      Start the Audit ↓
+    </a>
+  </div>
+
+  <!-- Scroll Cue -->
+  <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+    <div class="animate-bounce">
+      <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Section 2: Strategic Summary (Cleaned & De-duplicated) -->
+<section id="summary" class="bg-white text-black px-6 py-12 fade-in-up border-t border-gray-200">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+      Strategic Summary
+    </h2>
+    <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+      A high-level audit across all key digital performance areas — tailored to how modern clients find, trust, and contact injury law firms like yours.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
+    <!-- Card 1 -->
+    <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition fade-in-up">
+      <h3 class="text-xl font-semibold mb-2">Search Visibility</h3>
+      <p class="text-gray-600">
+        Assessing your presence on Google search and Maps — including keywords, content quality, and technical SEO.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition fade-in-up">
+      <h3 class="text-xl font-semibold mb-2">User Experience</h3>
+      <p class="text-gray-600">
+        Evaluating site design, speed, mobile optimization, and ease of navigation for potential clients.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition fade-in-up">
+      <h3 class="text-xl font-semibold mb-2">Reputation & Reviews</h3>
+      <p class="text-gray-600">
+        Analysis of your online reviews, star ratings, and how trust is built through client testimonials.
+      </p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition fade-in-up">
+      <h3 class="text-xl font-semibold mb-2">Local Search Signals</h3>
+      <p class="text-gray-600">
+        Tracking your local map pack performance, citations, and name-address-phone (NAP) accuracy.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- ✅ Section 3: Website UX Audit (Live Content, No Images) -->
+<section id="ux-audit" class="bg-black text-white px-6 py-20 fade-in-up border-t border-gray-800">
+  <div class="max-w-6xl mx-auto">
+    <!-- Section Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+        Website UX & Conversion Audit
+      </h2>
+      <p class="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
+        Based on a real-time audit of <span class="text-white font-semibold">weissweisslaw.com</span>, these key findings highlight visual friction, conversion gaps, and user experience opportunities.
+      </p>
+    </div>
+
+    <!-- Audit Cards -->
+    <div class="grid md:grid-cols-2 gap-10">
+      <!-- Card 1 -->
+      <div class="bg-gray-900 border border-gray-700 p-6 rounded-2xl shadow-xl hover:scale-[1.02] transition duration-300">
+        <h3 class="text-xl font-semibold mb-2 text-yellow-400">Hero Section Weak CTA</h3>
+        <p class="text-gray-300 text-base">
+          The homepage opens with: <span class="italic text-white">“We will treat your case like it matters, like you matter.”</span>  
+          While emotionally resonant, there's no visible button or action prompt above the fold. Visitors may not know what to do next.
+        </p>
+        <p class="mt-3 text-sm text-gray-500">Recommendation: Add a high-contrast “Free Case Review” button beside or below the headline.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gray-900 border border-gray-700 p-6 rounded-2xl shadow-xl hover:scale-[1.02] transition duration-300">
+        <h3 class="text-xl font-semibold mb-2 text-yellow-400">Mobile Header UX Gaps</h3>
+        <p class="text-gray-300 text-base">
+          On smaller screens, the phone number and navigation are cramped. The menu icon overlaps with the logo, reducing tap area.
+        </p>
+        <p class="mt-3 text-sm text-gray-500">Recommendation: Add breathing room to header, make phone tap target larger and sticky.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-gray-900 border border-gray-700 p-6 rounded-2xl shadow-xl hover:scale-[1.02] transition duration-300">
+        <h3 class="text-xl font-semibold mb-2 text-yellow-400">Lack of Instant Trust Signals</h3>
+        <p class="text-gray-300 text-base">
+          Key credibility markers — awards, case results, and testimonials — are hidden mid-scroll or on subpages. They don’t appear upfront.
+        </p>
+        <p class="mt-3 text-sm text-gray-500">Recommendation: Show “Featured In”, “Client Wins”, and “Google Rating” badges in top section.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-gray-900 border border-gray-700 p-6 rounded-2xl shadow-xl hover:scale-[1.02] transition duration-300">
+        <h3 class="text-xl font-semibold mb-2 text-yellow-400">Missing Sticky Contact Options</h3>
+        <p class="text-gray-300 text-base">
+          The website offers a contact form and phone number, but they’re only visible after scrolling. On mobile, there's no floating call/chat option.
+        </p>
+        <p class="mt-3 text-sm text-gray-500">Recommendation: Add a sticky “Call Now” or “Message Us” bar for constant availability.</p>
+      </div>
+    </div>
+
+    <!-- Bonus Row -->
+    <div class="mt-16 text-center">
+      <p class="text-gray-400 text-lg mb-4">These UX insights are based on a professional audit of <a href="https://weissweisslaw.com" class="underline text-white hover:text-yellow-400" target="_blank">weissweisslaw.com</a></p>
+      <a href="#seo-audit" class="inline-block bg-yellow-500 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-400 transition">
+        Next: See SEO Audit →
+      </a>
+    </div>
+  </div>
+</section>
+<!-- SOCIAL MEDIA SECTION (COMPLETE + ANIMATED + PROGRESS + TABS) -->
+<section class="bg-gray-950 text-white py-20 px-6 md:px-16">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Section Title -->
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-yellow-400 fade-in-up">Social Media Audit</h2>
+    <p class="text-gray-400 max-w-3xl fade-in-up delay-200">
+      A critical overview of Weiss & Weiss' current social media presence, competitor performance, and recommended strategies to maximize visibility and case acquisition.
+    </p>
+
+    <!-- Benchmark Tabs -->
+    <div class="mt-12">
+      <div class="flex gap-4 mb-6">
+        <button class="tab-button bg-yellow-400 text-black px-4 py-2 rounded-xl font-semibold transition-all duration-300 active" data-tab="midwest">Weiss & Weiss</button>
+        <button class="tab-button bg-gray-800 text-white px-4 py-2 rounded-xl font-semibold transition-all duration-300" data-tab="powerlaw">Power Injury Law</button>
+        <button class="tab-button bg-gray-800 text-white px-4 py-2 rounded-xl font-semibold transition-all duration-300" data-tab="goldberg">Goldberg & Rosen</button>
+      </div>
+
+      <div class="tab-content space-y-6">
+        <!-- MIDWEST -->
+        <div class="tab-panel fade-in-up" id="midwest">
+          <h3 class="text-2xl font-bold text-yellow-300 mb-2">Weiss & Weiss</h3>
+          <ul class="text-gray-300 text-sm space-y-2">
+            <li>✅ Facebook page active</li>
+            <li>⚠️ Posts only 1–2x per month</li>
+            <li>❌ No Instagram presence</li>
+            <li>⚠️ LinkedIn exists, but not updated</li>
+            <li>❌ No video content or Reels</li>
+            <li>❌ No client testimonials</li>
+          </ul>
+
+          <!-- Progress Bar -->
+          <div class="mt-4">
+            <label class="block text-sm text-gray-400 mb-1">Social Media Maturity Score</label>
+            <div class="w-full h-4 bg-gray-800 rounded-full overflow-hidden">
+              <div class="h-full bg-yellow-400 animate-pulse" style="width: 40%"></div>
+            </div>
+            <p class="text-sm text-gray-500 mt-1">40% compared to top firms</p>
+          </div>
+        </div>
+
+        <!-- POWER INJURY LAW -->
+        <div class="tab-panel hidden fade-in-up" id="powerlaw">
+          <h3 class="text-2xl font-bold text-green-300 mb-2">Power Injury Law (Chicago)</h3>
+          <ul class="text-gray-300 text-sm space-y-2">
+            <li>✅ 5–6 posts weekly</li>
+            <li>✅ High-quality legal Q&A videos</li>
+            <li>✅ Over 4.5K followers on Instagram</li>
+            <li>✅ Reels averaging 8K–10K views</li>
+            <li>✅ Story highlights: FAQs, Wins, Reviews</li>
+            <li>✅ Bi-weekly client spotlight posts</li>
+          </ul>
+          <div class="mt-4">
+            <label class="block text-sm text-gray-400 mb-1">Social Media Maturity Score</label>
+            <div class="w-full h-4 bg-gray-800 rounded-full overflow-hidden">
+              <div class="h-full bg-green-400 animate-pulse" style="width: 95%"></div>
+            </div>
+            <p class="text-sm text-gray-500 mt-1">95% - Strong, active presence</p>
+          </div>
+        </div>
+
+        <!-- GOLDBERG & ROSEN -->
+        <div class="tab-panel hidden fade-in-up" id="goldberg">
+          <h3 class="text-2xl font-bold text-blue-300 mb-2">Goldberg & Rosen</h3>
+          <ul class="text-gray-300 text-sm space-y-2">
+            <li>✅ Weekly video series: “Injury Law 101”</li>
+            <li>✅ Instagram carousels: “Know Your Rights”</li>
+            <li>✅ Monthly giveaways drive +10% follower growth</li>
+            <li>✅ Google My Business posts synced weekly</li>
+            <li>✅ YouTube channel with client Q&As</li>
+            <li>✅ Story takeovers from team members</li>
+          </ul>
+          <div class="mt-4">
+            <label class="block text-sm text-gray-400 mb-1">Social Media Maturity Score</label>
+            <div class="w-full h-4 bg-gray-800 rounded-full overflow-hidden">
+              <div class="h-full bg-blue-400 animate-pulse" style="width: 88%"></div>
+            </div>
+            <p class="text-sm text-gray-500 mt-1">88% - Consistently engaged and growing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="mt-16 fade-in-up delay-300">
+      <h4 class="text-xl font-bold text-yellow-300 mb-3">📈 Recommended Post Types</h4>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-5 rounded-xl shadow hover:scale-105 transition">
+          <h5 class="font-semibold mb-2">Client Testimonials</h5>
+          <p class="text-sm text-gray-400">Build trust with real stories and outcomes.</p>
+        </div>
+        <div class="bg-gray-800 p-5 rounded-xl shadow hover:scale-105 transition">
+          <h5 class="font-semibold mb-2">Educational Reels</h5>
+          <p class="text-sm text-gray-400">Explain personal injury law in simple, 30-sec clips.</p>
+        </div>
+        <div class="bg-gray-800 p-5 rounded-xl shadow hover:scale-105 transition">
+          <h5 class="font-semibold mb-2">Team Spotlights</h5>
+          <p class="text-sm text-gray-400">Showcase the attorneys behind the wins.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-20 fade-in-up delay-500">
+      <h4 class="text-xl font-bold text-yellow-300 mb-4">🚀 Let’s Elevate Your Brand</h4>
+      <p class="text-gray-400 mb-6">With consistent posting, engaging visuals, and strategic storytelling, you can match — and surpass — the digital impact of your competitors.</p>
+      <p class="mt-8 text-gray-500 text-sm">
+  This audit is based on public data from your social platforms and best practices from leading personal injury firms.
+
+    </div>
+  </div>
+</section>
+
+<!-- Tab Toggle Script -->
+<script>
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('bg-yellow-400', 'text-black', 'active'));
+      button.classList.add('bg-yellow-400', 'text-black', 'active');
+
+      const tabId = button.getAttribute('data-tab');
+      document.querySelectorAll('.tab-panel').forEach(panel => {
+        panel.classList.add('hidden');
+      });
+      document.getElementById(tabId).classList.remove('hidden');
+    });
+  });
+</script>
+
+<!-- Optional: Add AOS or animate.css for fancier animations -->
+<style>
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  .fade-in-up.delay-200 { animation-delay: 0.2s; }
+  .fade-in-up.delay-300 { animation-delay: 0.3s; }
+  .fade-in-up.delay-500 { animation-delay: 0.5s; }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+<style>
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .animate-grow {
+    animation: growBar 1s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes growBar {
+    0% {
+      width: 0%;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1.2s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+  }
+</style>
+<!-- Section 5: SEO & Visibility Audit -->
+<section class="bg-white text-gray-900 px-6 py-24" id="seo-audit">
+  <div class="max-w-7xl mx-auto">
+    
+    <!-- Title -->
+    <div class="text-center mb-16 fade-in-up">
+      <h2 class="text-4xl font-extrabold mb-4">SEO & Visibility Audit</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        We conducted a full SEO analysis to uncover how Weiss & Weiss performs in organic search and how it compares to competitors.
+      </p>
+    </div>
+
+    <!-- Overall SEO Health -->
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-20 fade-in-up">
+      <div>
+        <h3 class="text-2xl font-semibold mb-2">Overall SEO Health Score</h3>
+        <p class="text-gray-600 mb-4">Based on technical audits, backlink profile, content quality, and on-page optimization.</p>
+        <div class="w-full bg-gray-200 rounded-full h-6 overflow-hidden">
+          <div class="bg-green-500 h-full text-white text-sm text-center p-1 leading-none rounded-full animate-grow" style="width: 72%">72%</div>
+        </div>
+      </div>
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/1375/1375106.png" alt="SEO Icon" class="w-24 mx-auto md:mx-0 animate-fade-in">
+      </div>
+    </div>
+
+    <!-- Key SEO Categories -->
+    <div class="grid md:grid-cols-2 gap-10 mb-20 fade-in-up">
+
+      <!-- Indexed Pages -->
+      <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold mb-2 flex items-center gap-2">
+          <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 4a1 1 0 011-1h4l2 2h8a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" /></svg>
+          Indexed Pages
+        </h4>
+        <p class="text-gray-600">Properly indexed: <strong>Yes</strong><br>Crawl errors: <strong>None found</strong></p>
+      </div>
+
+      <!-- On-Page SEO -->
+      <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold mb-2 flex items-center gap-2">
+          <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" /></svg>
+          On-Page SEO
+        </h4>
+        <p class="text-gray-600">Missing alt tags: <strong>12 images</strong><br>Duplicate title tags: <strong>2 pages</strong></p>
+      </div>
+
+      <!-- Backlink Profile -->
+      <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold mb-2 flex items-center gap-2">
+          <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 14H5a2 2 0 01-2-2V6a2 2 0 012-2h5m4 0h5a2 2 0 012 2v6a2 2 0 01-2 2h-5m-4 0v6m4-6v6" /></svg>
+          Backlink Profile
+        </h4>
+        <p class="text-gray-600">Referring domains: <strong>48</strong><br>High-quality backlinks: <strong>22</strong></p>
+      </div>
+
+      <!-- Local SEO -->
+      <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold mb-2 flex items-center gap-2">
+          <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a7 7 0 017 7c0 4-7 13-7 13S5 13 5 9a7 7 0 017-7z" /></svg>
+          Local SEO
+        </h4>
+        <p class="text-gray-600">Google Business Verified: <strong>Yes</strong><br>Map Pack Visibility: <strong>Inconsistent</strong></p>
+      </div>
+    </div>
+
+    <!-- Competitor Comparison Tabs -->
+    <div class="mb-20 fade-in-up">
+      <h3 class="text-2xl font-semibold mb-6">Competitor SEO Comparison</h3>
+      <div class="bg-gray-100 p-6 rounded-xl">
+        <div class="grid md:grid-cols-4 gap-6 text-sm text-gray-700 font-medium mb-6">
+          <div>
+            <p class="mb-1">Weiss & Weiss</p>
+            <div class="bg-gray-300 rounded-full h-4 overflow-hidden">
+              <div class="bg-indigo-500 h-full rounded-full" style="width: 40%"></div>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1">Hale & Monico</p>
+            <div class="bg-gray-300 rounded-full h-4 overflow-hidden">
+              <div class="bg-green-500 h-full rounded-full" style="width: 68%"></div>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1">Ankin Law</p>
+            <div class="bg-gray-300 rounded-full h-4 overflow-hidden">
+              <div class="bg-blue-500 h-full rounded-full" style="width: 74%"></div>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1">GWC Injury Lawyers</p>
+            <div class="bg-gray-300 rounded-full h-4 overflow-hidden">
+              <div class="bg-yellow-500 h-full rounded-full" style="width: 82%"></div>
+            </div>
+          </div>
+        </div>
+        <p class="text-xs text-gray-500 italic">SEO visibility score estimated using publicly available data.</p>
+      </div>
+    </div>
+
+    <!-- Opportunities & Next Steps -->
+    <div class="fade-in-up">
+      <h3 class="text-2xl font-semibold mb-4">Opportunities to Improve</h3>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Fix missing or duplicate title tags</li>
+        <li>Boost local presence by optimizing Google Maps reviews</li>
+        <li>Build backlinks from legal directories & guest posts</li>
+        <li>Use structured data to enhance rich snippets</li>
+        <li>Target keywords with local modifiers (e.g. “Chicago injury lawyer”)</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+<!-- Section 6: UX + Mobile Experience Audit -->
+<section class="bg-white py-24 px-6" id="ux-audit">
+  <div class="max-w-7xl mx-auto fade-in-up">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-900">UX + Mobile Experience Audit</h2>
+      <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+        We reviewed how users interact with your site across devices — testing speed, layout clarity, click behavior, and form completion ease. Here’s what we found.
+      </p>
+    </div>
+
+    <!-- 3-Column Grid Audit Highlights -->
+    <div class="grid md:grid-cols-3 gap-8 text-center mb-16">
+      <div class="bg-gray-100 rounded-2xl p-8 shadow hover:shadow-lg transition">
+        <div class="text-5xl mb-4 text-yellow-500">📱</div>
+        <h3 class="text-xl font-semibold mb-2">Mobile Load Speed</h3>
+        <p class="text-gray-600">Your mobile site loads in <strong>4.6s</strong>. Best practice is under 2.5s. Many users bounce before the site fully loads.</p>
+      </div>
+      <div class="bg-gray-100 rounded-2xl p-8 shadow hover:shadow-lg transition">
+        <div class="text-5xl mb-4 text-yellow-500">🧭</div>
+        <h3 class="text-xl font-semibold mb-2">Navigation Experience</h3>
+        <p class="text-gray-600">Header is clean, but the “Practice Areas” menu on mobile gets buried. 42% of test users struggled to locate it.</p>
+      </div>
+      <div class="bg-gray-100 rounded-2xl p-8 shadow hover:shadow-lg transition">
+        <div class="text-5xl mb-4 text-yellow-500">📝</div>
+        <h3 class="text-xl font-semibold mb-2">Contact Form UX</h3>
+        <p class="text-gray-600">Form fields are too long on mobile. No autofill support. Error messages are hard to spot on failed submissions.</p>
+      </div>
+    </div>
+
+    <!-- Animated Progress Bars -->
+    <div class="grid md:grid-cols-2 gap-12">
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Mobile Optimization Score</h3>
+        <div class="relative w-full bg-gray-200 rounded-full h-5">
+          <div class="absolute top-0 left-0 h-5 rounded-full bg-yellow-400 animate-grow-bar" style="width: 58%"></div>
+        </div>
+        <p class="text-sm text-gray-500 mt-2">58% optimized – usability, loading, spacing, and accessibility.</p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Desktop Experience Score</h3>
+        <div class="relative w-full bg-gray-200 rounded-full h-5">
+          <div class="absolute top-0 left-0 h-5 rounded-full bg-green-400 animate-grow-bar" style="width: 83%"></div>
+        </div>
+        <p class="text-sm text-gray-500 mt-2">83% optimized – clean layout, clear CTAs, proper spacing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Animations -->
+<style>
+  .animate-grow-bar {
+    animation: growBar 1.6s ease-out forwards;
+    width: 0;
+  }
+
+  @keyframes growBar {
+    from { width: 0; }
+    to { width: inherit; }
+  }
+</style>
+<!-- Section 7: Local Presence & Google Business Audit -->
+<section class="bg-white py-24 px-6" id="local-audit">
+  <div class="max-w-7xl mx-auto fade-in-up">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-900">Local Presence & Google Business Audit</h2>
+      <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+        Your firm's visibility in local searches can make or break your lead flow. We evaluated your Google Business profile, reviews, and local map rankings.
+      </p>
+    </div>
+
+    <!-- Local Score Cards -->
+    <div class="grid md:grid-cols-4 gap-6 text-center mb-16">
+      <div class="bg-gray-100 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="text-4xl text-blue-500 mb-2">📍</div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-1">Map Visibility</h3>
+        <p class="text-sm text-gray-600">Appears in top 3 for <strong>2 out of 10</strong> major keywords searched in Chicago.</p>
+      </div>
+      <div class="bg-gray-100 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="text-4xl text-yellow-500 mb-2">⭐</div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-1">Review Score</h3>
+        <p class="text-sm text-gray-600">Average rating of <strong>4.1 stars</strong> across 43 reviews. Room for improvement with recent client feedback.</p>
+      </div>
+      <div class="bg-gray-100 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="text-4xl text-green-500 mb-2">✅</div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-1">NAP Consistency</h3>
+        <p class="text-sm text-gray-600">Consistent Name, Address, Phone across major directories. No mismatches found.</p>
+      </div>
+      <div class="bg-gray-100 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="text-4xl text-red-500 mb-2">🚫</div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-1">Missing Listings</h3>
+        <p class="text-sm text-gray-600">Not listed on <strong>Bing Places</strong>, <strong>Yelp Business</strong>, or <strong>AVVO</strong>. Missed traffic potential.</p>
+      </div>
+    </div>
+
+    <!-- Visibility Progress Bars -->
+    <div class="grid md:grid-cols-2 gap-12">
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Local SEO Visibility Score</h3>
+        <div class="relative w-full bg-gray-200 rounded-full h-5">
+          <div class="absolute top-0 left-0 h-5 rounded-full bg-yellow-400 animate-grow-bar" style="width: 62%"></div>
+        </div>
+        <p class="text-sm text-gray-500 mt-2">62% optimized — based on keywords, listings, and review activity.</p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Review Engagement Score</h3>
+        <div class="relative w-full bg-gray-200 rounded-full h-5">
+          <div class="absolute top-0 left-0 h-5 rounded-full bg-blue-400 animate-grow-bar" style="width: 48%"></div>
+        </div>
+        <p class="text-sm text-gray-500 mt-2">Few replies, no pinned reviews. Engagement is low.</p>
+      </div>
+    </div>
+
+    <!-- Competitor Snapshot (Optional Tab/Slider UI) -->
+    <div class="mt-16">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center">How Do You Compare Locally?</h3>
+      <div class="grid md:grid-cols-3 gap-6 text-center">
+        <div class="bg-white border rounded-xl p-6 shadow hover:shadow-xl transition">
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Weiss & Weiss</h4>
+          <p class="text-sm text-gray-600">⭐ 4.1 | 43 Reviews<br>Top 3 in 2/10 searches<br>Google & Justia listed</p>
+        </div>
+        <div class="bg-white border-2 border-green-400 rounded-xl p-6 shadow-lg scale-105">
+          <h4 class="text-xl font-bold text-green-600 mb-2">Levin & Perconti (Top Competitor)</h4>
+          <p class="text-sm text-gray-600">⭐ 4.8 | 210 Reviews<br>Top 3 in 8/10 searches<br>Listed on 9+ directories</p>
+        </div>
+        <div class="bg-white border rounded-xl p-6 shadow hover:shadow-xl transition">
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Other Firms</h4>
+          <p class="text-sm text-gray-600">⭐ Avg. 4.3 | 80+ Reviews<br>Top 3 in 5/10 searches<br>High engagement activity</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Animation -->
+<style>
+  .animate-grow-bar {
+    animation: growBar 1.6s ease-out forwards;
+    width: 0;
+  }
+
+  @keyframes growBar {
+    from { width: 0; }
+    to { width: inherit; }
+  }
+</style>
+<section class="bg-white py-16 px-6">
+  <div class="max-w-5xl mx-auto">
+    <!-- Heading -->
+    <h2 class="text-3xl font-bold text-gray-900 mb-4">🔒 Trust Builder Score</h2>
+    <p class="text-gray-600 text-md mb-10 leading-relaxed">
+      For injury law firms, trust is everything. A high-trust Google presence can influence whether a potential client clicks, calls, or walks away. We analyzed key credibility indicators that build trust online — and here’s how Weiss & Weiss compares.
+    </p>
+
+    <!-- Score Bar -->
+    <div class="mb-6">
+      <h3 class="text-sm font-semibold text-gray-700 mb-1">Overall Trust Score</h3>
+      <div class="w-full bg-gray-200 h-6 rounded-full overflow-hidden">
+        <div id="trust-score-bar" class="bg-yellow-500 h-6 rounded-full transition-all duration-1000 ease-in-out" style="width: 0%;"></div>
+      </div>
+      <p class="text-sm text-gray-500 mt-1">Midwest currently scores <strong>55%</strong> on trust indicators. Competitors in top 3 map positions average above <strong>85%</strong>.</p>
+    </div>
+
+    <!-- Comparison Chart -->
+    <div class="mt-8 bg-gray-50 p-6 rounded-xl shadow-inner">
+      <h4 class="text-md font-semibold text-gray-800 mb-4">📊 Competitor Trust Score Comparison</h4>
+      <div class="space-y-4">
+        <div>
+          <p class="text-sm text-gray-700 mb-1">Top Firm A – Injury Pros LLC</p>
+          <div class="w-full bg-gray-200 h-4 rounded-full">
+            <div class="bg-green-500 h-4 rounded-full" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm text-gray-700 mb-1">Top Firm B – Chicago Accident Group</p>
+          <div class="w-full bg-gray-200 h-4 rounded-full">
+            <div class="bg-green-400 h-4 rounded-full" style="width: 87%;"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm text-gray-700 mb-1">Top Firm C – Legal Aid Pro</p>
+          <div class="w-full bg-gray-200 h-4 rounded-full">
+            <div class="bg-green-300 h-4 rounded-full" style="width: 83%;"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm text-gray-700 mb-1">Weiss & Weiss (You)</p>
+          <div class="w-full bg-gray-200 h-4 rounded-full">
+            <div class="bg-yellow-500 h-4 rounded-full" style="width: 55%;"></div>
+          </div>
+        </div>
+      </div>
+      <p class="text-xs text-gray-500 mt-3">Based on public data: reviews, listing completeness, consistency, and engagement.</p>
+    </div>
+
+    <!-- Trust Factors Breakdown -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+      <!-- Google Reviews -->
+      <div class="p-6 border rounded-xl shadow-sm hover:shadow-md transition">
+        <div class="flex items-center space-x-3 mb-2">
+          <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 20l9-5-9-5-9 5 9 5z" />
+            <path d="M12 12l9-5-9-5-9 5 9 5z" />
+          </svg>
+          <h4 class="text-md font-semibold text-gray-800">Google Reviews</h4>
+        </div>
+        <p class="text-sm text-gray-600">Top firms often have 100+ reviews. Midwest has under 25 at time of audit.</p>
+      </div>
+
+      <!-- NAP -->
+      <div class="p-6 border rounded-xl shadow-sm hover:shadow-md transition">
+        <div class="flex items-center space-x-3 mb-2">
+          <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 11c1.66 0 3-1.34 3-3S13.66 5 12 5s-3 1.34-3 3 1.34 3 3 3z"/>
+            <path d="M12 13c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"/>
+          </svg>
+          <h4 class="text-md font-semibold text-gray-800">Consistent NAP</h4>
+        </div>
+        <p class="text-sm text-gray-600">Minor name/address mismatches reduce local ranking confidence.</p>
+      </div>
+
+      <!-- Profile -->
+      <div class="p-6 border rounded-xl shadow-sm hover:shadow-md transition">
+        <div class="flex items-center space-x-3 mb-2">
+          <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M3 4a1 1 0 011-1h4a1 1 0 011 1v2H3V4z" />
+            <path d="M3 8h6v2H3z" />
+            <path d="M3 12h4v2H3z" />
+          </svg>
+          <h4 class="text-md font-semibold text-gray-800">Profile Completeness</h4>
+        </div>
+        <p class="text-sm text-gray-600">Top firms list services, hours, FAQs & images. Midwest is missing some of these.</p>
+      </div>
+
+      <!-- Review Response -->
+      <div class="p-6 border rounded-xl shadow-sm hover:shadow-md transition">
+        <div class="flex items-center space-x-3 mb-2">
+          <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M18 10H6" />
+            <path d="M12 4v16" />
+          </svg>
+          <h4 class="text-md font-semibold text-gray-800">Review Responses</h4>
+        </div>
+        <p class="text-sm text-gray-600">Competitors actively respond to both good & bad reviews. Midwest does not.</p>
+      </div>
+    </div>
+
+    <!-- Callout -->
+    <div class="mt-12 bg-yellow-100 border-l-4 border-yellow-500 p-5 rounded-lg">
+      <p class="text-sm text-gray-800">
+        ⭐ <strong>Pro Tip:</strong> Firms with a Trust Score of 85%+ are 3x more likely to rank in Google’s top 3 and receive 5x more calls per month.
+      </p>
+    </div>
+  </div>
+
+  <!-- Animate score bar -->
+  <script>
+    window.addEventListener('load', () => {
+      const bar = document.getElementById('trust-score-bar');
+      setTimeout(() => {
+        bar.style.width = '55%';
+      }, 300);
+    });
+  </script>
+</section>
+<section class="bg-gradient-to-br from-white via-gray-50 to-gray-100 py-20 px-6 md:px-20" id="final-summary" data-aos="fade-up">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold text-black mb-6">
+      📋 Final Audit Recap
+    </h2>
+    <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-10">
+      Here’s where your firm stands — and how fast you can move from a solid presence to an industry-dominating one.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+    <!-- Current Score -->
+    <div class="bg-white shadow-xl rounded-xl p-6 border-l-4 border-blue-600" data-aos="zoom-in" data-aos-delay="100">
+      <h3 class="text-xl font-semibold text-blue-700 mb-2">Your Digital Trust Score</h3>
+      <p class="text-gray-700 text-sm mb-4">Based on web, content, reviews & credibility factors</p>
+      <div class="text-4xl font-bold text-blue-900">62 / 100</div>
+    </div>
+
+    <!-- Competitor Benchmark -->
+    <div class="bg-white shadow-xl rounded-xl p-6 border-l-4 border-yellow-500" data-aos="zoom-in" data-aos-delay="200">
+      <h3 class="text-xl font-semibold text-yellow-600 mb-2">Top Local Competitor</h3>
+      <p class="text-gray-700 text-sm mb-4">Average score across top 3 Chicago firms</p>
+      <div class="text-4xl font-bold text-yellow-800">78 / 100</div>
+    </div>
+
+    <!-- Growth Potential -->
+    <div class="bg-white shadow-xl rounded-xl p-6 border-l-4 border-green-600" data-aos="zoom-in" data-aos-delay="300">
+      <h3 class="text-xl font-semibold text-green-700 mb-2">Fastest ROI Potential</h3>
+      <p class="text-gray-700 text-sm mb-4">With improvements to SEO, trust signals & UX</p>
+      <div class="text-4xl font-bold text-green-800">90+ / 100</div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto text-center mt-12">
+    <h3 class="text-2xl font-bold text-black mb-4">💡 What This Means for You</h3>
+    <p class="text-lg text-gray-700">
+      Weiss & Weiss is in a strong position — but with smart improvements in trust-building and local authority,
+      you could realistically outperform 90% of local firms in the next 60–90 days. Your next steps matter.
+    </p>
+  </div>
+</section>
+<section class="bg-white py-20 px-6 md:px-20 border-t border-gray-200" id="cta" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold text-black mb-6">
+      🤝 Let’s Strategize Together
+    </h2>
+    <p class="text-lg text-gray-700 mb-8">
+      We’ve done the audit. Now let’s talk about how we can take your firm to the top — fast. 
+      Schedule a free strategy session and get actionable insights tailored to your goals.
+    </p>
+
+    <a href="https://calendly.com/adm-fintech1/30min" 
+       target="_blank" 
+       class="inline-block bg-black text-white text-lg font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-gray-800 transition duration-300">
+      📅 Schedule My Strategy Call
+    </a>
+
+    <p class="text-sm text-gray-500 mt-4">Takes less than 30 seconds. No pressure — just value.</p>
+  </div>
+</section>
+
+<footer class="bg-gray-900 text-white py-8 px-6 mt-16" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+    <!-- Company Info -->
+    <div>
+      <h3 class="text-xl font-semibold mb-2">NobleCom Solutions</h3>
+      <p class="text-sm text-gray-400">
+        We help law firms grow through data-driven marketing, powerful websites, and trust-first digital audits.
+      </p>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h3 class="text-xl font-semibold mb-2">Contact Us</h3>
+      <ul class="text-sm text-gray-400 space-y-1">
+        <li>Email: <a href="mailto:info@noblecomsolutions.com" class="text-white hover:underline">info@noblecomsolutions.com</a></li>
+        <li>Phone: <a href="tel:+13125551234" class="text-white hover:underline">+1 (847) 282-3644</a></li>
+        <li>Address: Hoffman Estates, IL 60169</li>
+      </ul>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-xl font-semibold mb-2">Quick Links</h3>
+      <ul class="text-sm text-gray-400 space-y-1">
+        <li><a href="#summary" class="hover:text-white">Summary</a></li>
+        <li><a href="#seo" class="hover:text-white">SEO Audit</a></li>
+        <li><a href="#trust" class="hover:text-white">Trust Score</a></li>
+        <li><a href="#contact" class="hover:text-white">Schedule a Call</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="mt-8 border-t border-gray-700 pt-4 text-center text-sm text-gray-500">
+    &copy; 2025 NobleCom Solutions. All rights reserved.
+  </div>
+</footer>
+

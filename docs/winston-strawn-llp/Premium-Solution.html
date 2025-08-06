@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winston & Strawn LLP | Growth Strategy</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FFD700',
+            secondary: '#1A365D',
+            accent: '#E53E3E',
+            dark: '#0F172A',
+            light: '#F8FAFC',
+            premium: {
+              gold: '#D4AF37',
+              silver: '#C0C0C0',
+              bronze: '#CD7F32',
+              navy: '#0A1931'
+            }
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+            serif: ['Playfair Display', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    :root {
+      --gradient-start: #1A365D;
+      --gradient-end: #0F172A;
+    }
+    
+    body {
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+      color: #F8FAFC;
+      font-family: 'Montserrat', sans-serif;
+      scroll-behavior: smooth;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    
+    .hero-pattern {
+      background: radial-gradient(circle, rgba(26,54,93,0.5) 0%, rgba(15,23,42,0.9) 80%);
+    }
+    
+    .card-glow {
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+      transition: all 0.4s ease;
+    }
+    
+    .card-glow:hover {
+      box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25);
+      transform: translateY(-5px);
+    }
+    
+    .premium-border {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .premium-border::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #D4AF37, #FFD700, #D4AF37);
+    }
+    
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #FFD700, transparent);
+      margin: 60px auto;
+      width: 80%;
+    }
+    
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.22, 0.61, 0.36, 1), 
+                 transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    
+    .fade-in.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .progress-bar {
+      position: relative;
+      height: 10px;
+      width: 100%;
+      background: #1E293B;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    
+    .progress-fill {
+      position: absolute;
+      height: 100%;
+      width: 0;
+      border-radius: 5px;
+      transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    
+    .trust-meter {
+      position: relative;
+      height: 12px;
+      background: linear-gradient(90deg, #E53E3E, #DD6B20, #38A169);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    
+    .trust-pointer {
+      position: absolute;
+      top: -6px;
+      width: 4px;
+      height: 24px;
+      background: white;
+      transform: translateX(-50%);
+      transition: left 1s ease-in-out;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    
+    .floating-cta {
+      animation: float 4s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .premium-box {
+      background: linear-gradient(145deg, rgba(26, 54, 93, 0.6), rgba(10, 25, 49, 0.7));
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    
+    .title-box {
+      background: linear-gradient(90deg, #1A365D, #0A1931);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      padding: 20px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .title-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #D4AF37, #FFD700, #D4AF37);
+    }
+    
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+      70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+    }
+    
+    .sparkle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: #FFD700;
+      border-radius: 50%;
+      opacity: 0;
+      animation: sparkle 3s infinite;
+    }
+    
+    @keyframes sparkle {
+      0% { opacity: 0; transform: scale(0); }
+      50% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(0); }
+    }
+    
+    .sparkle:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+    .sparkle:nth-child(2) { top: 20%; left: 80%; animation-delay: 1s; }
+    .sparkle:nth-child(3) { top: 80%; left: 40%; animation-delay: 2s; }
+    .sparkle:nth-child(4) { top: 60%; left: 70%; animation-delay: 0.5s; }
+    .sparkle:nth-child(5) { top: 30%; left: 30%; animation-delay: 1.5s; }
+    
+    .glow-text {
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+  </style>
+</head>
+<body class="bg-dark text-light">
+  
+  <!-- Hero Section -->
+  <section class="relative hero-pattern min-h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0 opacity-20" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2070&auto=format&fit=crop'); background-size: cover;"></div>
+    
+    <!-- Sparkle effects -->
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    
+    <div class="container mx-auto px-4 py-20 relative z-10">
+      <div class="max-w-5xl mx-auto text-center">
+        <div class="inline-block bg-gradient-to-r from-premium-gold to-premium-bronze px-6 py-2 rounded-full mb-6">
+          <span class="text-white font-semibold uppercase tracking-wider">ELITE GROWTH STRATEGY</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-serif font-bold mb-6 glow-text">
+          <span class="block">Premium Solutions for</span>
+          <span class="text-primary">Winston & Strawn LLP</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-10">
+          Based on our comprehensive audit, here are the high-impact strategies to transform your digital presence and case acquisition.
+        </p>
+        <a href="#solutions" class="floating-cta inline-block bg-gradient-to-r from-premium-gold to-yellow-500 hover:from-yellow-500 hover:to-premium-gold text-premium-navy font-bold text-lg px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg">
+          Explore Solutions <i class="ml-2 fas fa-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+    
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <i class="fas fa-chevron-down text-primary text-2xl"></i>
+    </div>
+  </section>
+  
+  <!-- Solutions Section -->
+  <section id="solutions" class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto text-center mb-16">
+        <div class="title-box inline-block px-8 py-4 mb-10">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold mb-2">
+            Strategic Growth Solutions
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Customized solutions based on our audit findings
+          </p>
+        </div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div class="fade-in premium-box card-glow p-6 premium-border">
+          <div class="w-16 h-16 bg-premium-gold/20 rounded-xl flex items-center justify-center mb-6 mx-auto">
+            <i class="fas fa-search-location text-premium-gold text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center text-premium-gold">Local SEO Dominance</h3>
+          <p class="text-gray-300 text-center">
+            Optimize Google Business profile, local citations, and geo-targeted content for "Chicago injury lawyer" keywords.
+          </p>
+          <div class="mt-4 text-center">
+            <span class="inline-block bg-premium-navy text-premium-gold px-3 py-1 rounded-full text-sm font-bold">Priority</span>
+          </div>
+        </div>
+        
+        <div class="fade-in premium-box card-glow p-6 premium-border">
+          <div class="w-16 h-16 bg-premium-gold/20 rounded-xl flex items-center justify-center mb-6 mx-auto">
+            <i class="fas fa-mobile-alt text-premium-gold text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center text-premium-gold">Mobile UX Transformation</h3>
+          <p class="text-gray-300 text-center">
+            Redesign mobile navigation, add sticky contact options, and improve loading speed.
+          </p>
+          <div class="mt-4 text-center">
+            <span class="inline-block bg-premium-navy text-premium-gold px-3 py-1 rounded-full text-sm font-bold">High Impact</span>
+          </div>
+        </div>
+        
+        <div class="fade-in premium-box card-glow p-6 premium-border">
+          <div class="w-16 h-16 bg-premium-gold/20 rounded-xl flex items-center justify-center mb-6 mx-auto">
+            <i class="fas fa-medal text-premium-gold text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center text-premium-gold">Trust Signal Overhaul</h3>
+          <p class="text-gray-300 text-center">
+            Showcase client testimonials, case results, and attorney credentials prominently.
+          </p>
+          <div class="mt-4 text-center">
+            <span class="inline-block bg-premium-navy text-premium-gold px-3 py-1 rounded-full text-sm font-bold">Conversion Focus</span>
+          </div>
+        </div>
+        
+        <div class="fade-in premium-box card-glow p-6 premium-border">
+          <div class="w-16 h-16 bg-premium-gold/20 rounded-xl flex items-center justify-center mb-6 mx-auto">
+            <i class="fas fa-bullhorn text-premium-gold text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center text-premium-gold">Content Strategy</h3>
+          <p class="text-gray-300 text-center">
+            Develop educational content and client success stories across platforms.
+          </p>
+          <div class="mt-4 text-center">
+            <span class="inline-block bg-premium-navy text-premium-gold px-3 py-1 rounded-full text-sm font-bold">Authority Building</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="section-divider"></div>
+  
+  <!-- Implementation Roadmap -->
+  <section class="py-20 bg-gradient-to-br from-premium-navy/50 to-secondary/30">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto text-center mb-16">
+        <div class="title-box inline-block px-8 py-4 mb-10">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold mb-2">
+            Premium Implementation Roadmap
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Our 90-day plan to transform your digital presence
+          </p>
+        </div>
+      </div>
+      
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="fade-in premium-box card-glow p-8 premium-border">
+          <div class="text-center mb-6">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-premium-gold to-premium-bronze mx-auto mb-4">
+              <span class="text-2xl font-bold text-white">1</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-2 text-premium-gold">Month 1: Foundation</h3>
+            <div class="w-20 h-1 bg-premium-gold mx-auto rounded-full"></div>
+          </div>
+          <ul class="space-y-4 text-gray-300">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-premium-gold mt-1 mr-3"></i>
+              <span>UX/Website improvements</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-premium-gold mt-1 mr-3"></i>
+              <span>Trust signal implementation</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-premium-gold mt-1 mr-3"></i>
+              <span>Local SEO foundation</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-premium-gold mt-1 mr-3"></i>
+              <span>Conversion rate optimization</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="fade-in premium-box card-glow p-8 premium-border transform md:scale-105 z-10">
+          <div class="text-center mb-6">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-premium-silver to-gray-400 mx-auto mb-4">
+              <span class="text-2xl font-bold text-white">2</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-2 text-premium-silver">Month 2: Growth</h3>
+            <div class="w-20 h-1 bg-premium-silver mx-auto rounded-full"></div>
+          </div>
+          <ul class="space-y-4 text-gray-300">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-premium-silver mt-1 mr-3"></i>
+              <span>Content marketing launch</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-premium-silver mt-1 mr-3"></i>
+              <span>Review generation system</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-premium-silver mt-1 mr-3"></i>
+              <span>Social media activation</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-premium-silver mt-1 mr-3"></i>
+              <span>PPC campaign setup</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="fade-in premium-box card-glow p-8 premium-border">
+          <div class="text-center mb-6">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-premium-bronze to-premium-gold mx-auto mb-4">
+              <span class="text-2xl font-bold text-white">3</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-2 text-premium-bronze">Month 3: Expansion</h3>
+            <div class="w-20 h-1 bg-premium-bronze mx-auto rounded-full"></div>
+          </div>
+          <ul class="space-y-4 text-gray-300">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-premium-bronze mt-1 mr-3"></i>
+              <span>Advanced conversion optimization</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-premium-bronze mt-1 mr-3"></i>
+              <span>Competitor outperformance</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-premium-bronze mt-1 mr-3"></i>
+              <span>Ongoing optimization</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-premium-bronze mt-1 mr-3"></i>
+              <span>ROI analysis & scaling</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="section-divider"></div>
+  
+  <!-- Competitive Advantage -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto text-center mb-16">
+        <div class="title-box inline-block px-8 py-4 mb-10">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold mb-2">
+            Projected Competitive Advantage
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            How implementing these solutions will position you against competitors
+          </p>
+        </div>
+      </div>
+      
+      <div class="max-w-6xl mx-auto premium-box card-glow p-8 premium-border fade-in">
+        <div class="grid grid-cols-5 gap-4 text-sm mb-8 text-premium-gold font-semibold">
+          <div></div>
+          <div class="text-center">Current</div>
+          <div class="text-center">Projected</div>
+          <div class="text-center">Top Competitor</div>
+          <div class="text-center">Industry Avg</div>
+        </div>
+        
+        <div class="space-y-8">
+          <!-- SEO -->
+          <div>
+            <div class="flex items-center mb-3">
+              <i class="fas fa-search mr-3 text-premium-gold text-xl"></i>
+              <span class="font-semibold text-lg">SEO Visibility</span>
+            </div>
+            <div class="grid grid-cols-5 gap-4 items-center">
+              <div class="text-right text-gray-400">Score:</div>
+              <div class="text-center">
+                <div class="progress-bar">
+                  <div class="progress-fill bg-premium-bronze" style="width: 45%"></div>
+                </div>
+                <span class="text-sm">45%</span>
+              </div>
+              <div class="text-center">
+                <div class="progress-bar">
+                  <div class="progress-fill bg-premium-gold" style="width: 80%"></div>
+                </div>
+                <span class="text-sm">80%</span>
+              </div>
+              <div class="text-center">
+                <div class="progress-bar">
+                  <div class="progress-fill bg-premium-silver" style="width: 72%"></div>
+                </div>
+                <span class="text-sm">72%</span>
+              </div>
+              <div class="text-center">
+                <div class="progress-bar">
+                  <div class="progress-fill bg-gray-400" style="width: 58%"></div>
+                </div>
+                <span class="text-sm">58%</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Reviews -->
+          <div>
+            <div class="flex items-center mb-3">
+              <i class="fas fa-star mr-3 text-premium-gold text-xl"></i>
+              <span class="font-semibold text-lg">Review Quality</span>
+            </div>
+            <div class="grid grid-cols-5 gap-4 items-center">
+              <div class="text-right text-gray-400">Avg. Rating:</div>
+              <div class="text-center">4.1 ★ (28)</div>
+              <div class="text-center">4.7 ★ (100+)</div>
+              <div class="text-center">4.7 ★ (142)</div>
+              <div class="text-center">4.3 ★ (65)</div>
+            </div>
+          </div>
+          
+          <!-- Trust -->
+          <div>
+            <div class="flex items-center mb-3">
+              <i class="fas fa-shield-alt mr-3 text-premium-gold text-xl"></i>
+              <span class="font-semibold text-lg">Trust Signals</span>
+            </div>
+            <div class="grid grid-cols-5 gap-4 items-center">
+              <div class="text-right text-gray-400">Score:</div>
+              <div class="text-center">
+                <div class="progress-bar">
+                  <div class="progress-fill bg-premium-bronze" style="width: 38%"></div>
+                </div>
+                <span class="text-sm">38%</span>
+              </div>
+              <div class="text-center">
+                <div class="progress-bar">
+                  <div class="progress-fill bg-premium-gold" style="width: 85%"></div>
+                </div>
+                <span class="text-sm">85%</span>
+              </div>
+              <div class="text-center">
+                <div class="progress-bar">
+                  <div class="progress-fill bg-premium-silver" style="width: 82%"></div>
+                </div>
+                <span class="text-sm">82%</span>
+              </div>
+              <div class="text-center">
+                <div class="progress-bar">
+                  <div class="progress-fill bg-gray-400" style="width: 65%"></div>
+                </div>
+                <span class="text-sm">65%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="section-divider"></div>
+  
+  <!-- ROI Calculator -->
+  <section class="py-20 bg-gradient-to-br from-premium-navy/50 to-secondary/30">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto text-center mb-16">
+        <div class="title-box inline-block px-8 py-4 mb-10">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold mb-2">
+            Growth ROI Calculator
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            See how improving your digital presence impacts your case volume
+          </p>
+        </div>
+      </div>
+      
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div class="fade-in">
+          <h3 class="text-2xl md:text-3xl font-serif font-bold mb-6 text-premium-gold">
+            Calculate Your <span class="text-white">Growth Potential</span>
+          </h3>
+          <p class="text-lg text-gray-300 mb-6">
+            Based on industry benchmarks and your current performance, see how implementing our solutions can impact your bottom line.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fas fa-chart-line text-premium-gold mt-1 mr-3 text-xl"></i>
+              <span class="text-gray-300">Firms that implement these strategies see 40-150% increase in qualified leads</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-dollar-sign text-premium-gold mt-1 mr-3 text-xl"></i>
+              <span class="text-gray-300">Higher conversion rates mean more cases without increasing marketing spend</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-trophy text-premium-gold mt-1 mr-3 text-xl"></i>
+              <span class="text-gray-300">Position your firm as the top choice in your market</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="fade-in premium-box card-glow p-8 premium-border">
+          <div class="space-y-6">
+            <div>
+              <label class="block text-gray-300 mb-2">Current Monthly Website Visitors</label>
+              <input type="number" id="visitors" value="2500" class="w-full bg-premium-navy border border-premium-gold/30 text-white px-4 py-3 rounded-lg">
+            </div>
+            
+            <div>
+              <label class="block text-gray-300 mb-2">Current Conversion Rate (%)</label>
+              <input type="number" id="conversion" value="2" class="w-full bg-premium-navy border border-premium-gold/30 text-white px-4 py-3 rounded-lg">
+            </div>
+            
+            <div>
+              <label class="block text-gray-300 mb-2">Average Case Value ($)</label>
+              <input type="number" id="case-value" value="15000" class="w-full bg-premium-navy border border-premium-gold/30 text-white px-4 py-3 rounded-lg">
+            </div>
+            
+            <div>
+              <label class="block text-gray-300 mb-2">Projected Conversion Improvement (%)</label>
+              <input type="range" id="improvement" min="10" max="150" value="60" class="w-full accent-premium-gold">
+              <div class="flex justify-between text-sm text-gray-400">
+                <span>10%</span>
+                <span id="improvement-value">60%</span>
+                <span>150%</span>
+              </div>
+            </div>
+            
+            <div class="pt-6 border-t border-premium-gold/30">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-premium-navy/50 p-4 rounded-lg">
+                  <p class="text-gray-400">Additional Cases/Month:</p>
+                  <p id="additional-cases" class="text-2xl font-bold text-premium-gold">30</p>
+                </div>
+                <div class="bg-premium-navy/50 p-4 rounded-lg">
+                  <p class="text-gray-400">Revenue Increase:</p>
+                  <p id="revenue" class="text-2xl font-bold text-premium-gold">$450,000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="section-divider"></div>
+  
+  <!-- CTA Section -->
+  <section id="cta" class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="title-box inline-block px-8 py-6 mb-10">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold mb-3">
+            Ready to Transform Your Case Volume?
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Schedule your complimentary strategy session today
+          </p>
+        </div>
+        
+        <div class="max-w-xl mx-auto premium-box card-glow p-8 premium-border fade-in">
+          <div class="mb-6 text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-premium-gold to-premium-bronze mx-auto mb-4 pulse">
+              <i class="fas fa-calendar-check text-white text-2xl"></i>
+            </div>
+            <p class="text-premium-gold font-bold text-lg">Exclusive Offer:</p>
+            <p class="text-gray-300">Complimentary 90-minute growth strategy session</p>
+          </div>
+          
+<a href="https://calendly.com/adm-fintech1/30min" class="floating-cta block w-full bg-gradient-to-r from-premium-gold to-yellow-500 hover:from-yellow-500 hover:to-premium-gold text-premium-navy font-bold text-lg px-6 py-4 rounded-lg transition-all transform hover:scale-[1.02] shadow-lg">
+  <i class="fas fa-calendar-check mr-2"></i>Schedule Strategy Session
+</a>
+
+          
+          <p class="text-gray-400 text-sm mt-6 flex items-center justify-center">
+            <i class="fas fa-lock mr-2"></i>100% confidential. No obligation. Growth-focused.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="py-12 bg-premium-navy border-t border-premium-gold/20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <h3 class="text-xl font-bold text-premium-gold mb-2">Noblecom Solutions</h3>
+            <p class="text-gray-400 max-w-md">
+              Premium digital growth strategies for forward-thinking law firms.
+            </p>
+          </div>
+          
+          <div><a href="https://www.noblecomsolutionsinc.com" class="text-premium-gold">www.noblecomsolutionsinc.com</a></div>
+        </div>
+        
+        <div class="border-t border-premium-gold/10 mt-8 pt-8 text-center">
+          <p class="text-gray-500">
+            © 2025 Noblecom Solutions. This strategy is confidential and prepared exclusively for Winston & Strawn LLP.
+            Distribution without permission is prohibited.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    // Fade-in animation on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    
+    fadeElements.forEach(element => {
+      observer.observe(element);
+    });
+    
+    // Animate progress bars
+    document.addEventListener('DOMContentLoaded', function() {
+      const progressBars = document.querySelectorAll('.progress-fill');
+      progressBars.forEach(bar => {
+        const width = bar.style.width;
+        bar.style.width = '0';
+        
+        setTimeout(() => {
+          bar.style.width = width;
+        }, 500);
+      });
+      
+      // ROI Calculator Logic
+      function calculateROI() {
+        const visitors = parseInt(document.getElementById('visitors').value) || 0;
+        const conversion = parseFloat(document.getElementById('conversion').value) || 0;
+        const caseValue = parseInt(document.getElementById('case-value').value) || 0;
+        const improvement = parseInt(document.getElementById('improvement').value) || 0;
+        
+        const currentCases = (visitors * conversion) / 100;
+        const newConversion = conversion * (1 + improvement/100);
+        const newCases = (visitors * newConversion) / 100;
+        const additionalCases = Math.round(newCases - currentCases);
+        const revenueIncrease = additionalCases * caseValue;
+        
+        document.getElementById('additional-cases').textContent = additionalCases;
+        document.getElementById('revenue').textContent = '$' + revenueIncrease.toLocaleString();
+      }
+      
+      // Set up ROI calculator
+      document.getElementById('improvement').addEventListener('input', function() {
+        document.getElementById('improvement-value').textContent = this.value + '%';
+        calculateROI();
+      });
+      
+      // Add input listeners
+      ['visitors', 'conversion', 'case-value'].forEach(id => {
+        document.getElementById(id).addEventListener('input', calculateROI);
+      });
+      
+      // Initial calculation
+      calculateROI();
+    });
+  </script>
+</body>
+</html>
